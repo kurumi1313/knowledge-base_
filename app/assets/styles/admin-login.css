@@ -1,0 +1,62 @@
+.login-wrapper {
+	width: 100%;
+	min-height: 100vh;
+	background-color: var(--whiteColor);
+}
+
+.login-wrapper,
+.admin-form > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.login-container {
+	background-color: var(--mainBackColorDark);
+	color: var(--whiteColor);
+	padding: calc(2 * var(--index)) calc(1.8 * var(--index));
+}
+
+.admin-form > div {
+	flex-direction: column;
+	margin-top: calc(1 * var(--index));
+}
+
+.admin-form > div > * {
+	margin: calc(.4 * var(--index));
+}
+
+textarea,
+.admin-form__input {
+	border-radius: 25px;
+	padding: calc(.4 * var(--index));
+	font-size: calc(.6 * var(--index));
+	width: calc(100% - calc(.8 * var(--index)));
+}
+
+textarea {
+	outline: none;
+	max-width: 500px;
+	max-height: 350px;
+	min-width: 250px;
+	min-height: 150px;
+}
+
+.admin-form__btn {
+	padding: calc(.4 * var(--index)) calc(.8 * var(--index));
+	cursor: pointer;
+	background-color: var(--blueColor);
+	color: var(--whiteColor);
+	transition: background-color .3s ease;
+	border-radius: 5px;
+}
+
+.admin-form__btn:hover {
+	background-color: var(--blueColorOpacity);
+}
+
+.admin-form__btn,
+.admin-form__input {
+	outline: none;
+	border: 0px;
+}

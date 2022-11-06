@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --index: calc(1vh + 1vw);
+    --mainBackColorDark: #242328;
+    --mainBackColorDarkHover: #323136;
+    --whiteColor: #fff;
+    --blueColor: #00aeef;
+    --blueColorOpacity: #20c2ff;
+}
+
+body {
+    overflow: auto;
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
+    background-color: var(--mainBackColorDarkHover);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--blueColor);
+}

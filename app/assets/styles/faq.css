@@ -1,0 +1,143 @@
+
+.container_lists {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	margin: 15px 0;
+}
+
+.list_block {
+	width: 70%;
+	list-style: none;
+	padding-inline-start: 0;
+}
+
+.list_block>li {
+	margin-bottom: 10px;
+	position: relative;
+}
+
+.list_header {
+	font-size: 30px;
+	padding: 15px 15px 15px 60px;
+	cursor: pointer;
+	background-color: rgb(86, 97, 109);
+	border-radius: 5px;
+	margin-bottom: 5px;
+}
+
+.list_header:hover {
+	background-color: rgb(151, 151, 163);
+}
+
+.list_header:after,
+.list_header:before {
+	content: "";
+	position: absolute;
+	top: 30px;
+	width: 20px;
+	height: 2px;
+	background-color: white;
+	transition: all ease .5s;
+}
+
+.list_header:after {
+	transform: rotate(-45deg);
+	left: 28px;
+}
+
+.list_header:before {
+	transform: rotate(45deg);
+	left: 15px;
+}
+
+.list_header.active:after {
+	transform: rotate(45deg);
+	background-color: rgb(241, 16, 91);
+}
+
+.list_header.active:before {
+	transform: rotate(-45deg);
+	background-color: red;
+}
+
+.list_content {
+	position: relative;
+	background-color: rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+	font-size: 22px;
+	transition: all ease .5s;
+	overflow: hidden;
+}
+
+.list_content_inside.active {
+	background-color: rgb(57, 57, 80);
+	top: 0;
+	width: 100%;
+}
+
+.list_content_inside {
+	padding: 15px;
+	position: absolute;
+	top: -200px;
+}
+
+@media (max-width: 767px) {
+	.list_block {
+		padding: 0 15px;
+		width: calc(100% - 30px);
+	}
+}
+
+.newlist {
+	display: flex;
+	margin-bottom: 30px;
+	padding: 10px 6px;
+	justify-content: flex-start;
+}
+
+.comment-inner {
+	position: relative;
+	width: 60%;
+}
+
+.comment-label {
+	color: white;
+	position: absolute;
+	top: -16px;
+	left: -9px;
+	padding: 4px 8px;
+	font-size: 15px;
+	line-height: 14px;
+}
+
+.comment-field {
+	font-size: 15px;
+	margin-top: 10px;
+	width: 95%;
+	height: 20px;
+	padding: 0 5px;
+	border: none;
+	background-color: transparent;
+	font: inherit;
+	font-size: 14px;
+	line-height: 20px;
+	color: white;
+}
+
+.comment-field::placeholder {
+	color: #aaaaaa;
+	font: inherit;
+	font-size: 14px;
+	font-style: italic;
+}
+
+.comment-field:focus::placeholder {
+	font-size: 0;
+}
+
+.comment-field:hover::placeholder,
+.comment-field:active::placeholder {
+	opacity: 0.5;
+}

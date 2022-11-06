@@ -1,0 +1,153 @@
+
+.sample {
+  color:white;
+  margin-bottom: 20px;
+  display: flex;
+  width: auto;
+  justify-content: center;
+  height: auto;
+}
+.sample-container{
+  width: 130vh;
+  background: linear-gradient(#343436, #535353) no-repeat;
+  padding: 20px 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 3px 3px 50px rgb(101, 108, 114);
+}
+.sample legend {
+  font-size: 23px;
+  text-align: center;
+  border: 7px double #505050;
+}
+
+.sample fieldset {
+  border: none;
+  width: 80%;
+}
+
+.sample fieldset:first-child {
+  width: 80%;
+}
+
+.sample fieldset:last-child {
+  width: 80%;
+}
+
+.head-sample {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.head-sample-text-block {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.head-sample-text {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+}
+
+.about-sample {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-sample-text-block {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.about-sample-text {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+}
+
+.com-text-container {
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Rubik One', sans-serif;
+  font-size: 25px;
+  border-radius: 8px;
+  padding: 3px 35px;
+  position: relative;
+  min-width: 80vh;
+  max-width: 600px;
+  min-height: 20vh;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+hr{
+  width: 90%;
+  margin: auto;
+  margin-top: 10px;
+  border-color: black;
+}
+.photo-block{
+  display: flex;
+  justify-content: center;
+  margin: 6px auto;
+  width:100%;
+  height: 80%;
+}
+.video-block,
+video {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 6px auto;
+  height: 80%;
+}
+.video,
+video{
+  margin-top:5px;
+  width: 100%;
+  height: 60%;
+}
+.photo{
+  margin-top:5px;
+  width: 100%;
+  height: 60%;
+}
+.com-text-container label {
+  text-align: center;
+  width: 100%;
+}
+
+.doc {
+  color: rgb(7, 6, 6);
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  height: 50px;
+}
+
+.doc a {
+  text-decoration: none;
+  color: white;
+  padding: 2px;
+  border: 2px double #9595b6;
+  font-size: 25px;
+}
+
+.doc a:hover {
+  text-decoration: none;
+  box-shadow: 1px 1px 5px white;
+}
+.name,
+.theme{
+  margin: 10px 20px;
+    font-size: 25px;
+    color: white;
+    text-shadow: 0 0 10px black, 0 0 10px black, 0 0 15px black, 0 0 15px rgb(219, 212, 212), 0 0 30px rgb(221, 217, 217), 0 0 35px rgb(206, 199, 199), 0 0 45px rgb(216, 209, 209), 0 0 70px rgb(63, 61, 61);
+}

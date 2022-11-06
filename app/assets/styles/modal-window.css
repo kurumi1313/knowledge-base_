@@ -1,0 +1,123 @@
+body.modal_open {
+  overflow: hidden;
+}
+
+.cover {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 500;
+    background-color: rgba(50, 50, 50, .5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.cover.open {
+  display: flex;
+}
+
+.btn-close:hover{
+  outline: 2px groove #7c7c7c;
+  outline-offset: 5px;
+}
+
+.btn-close {
+  margin: 20px 0px;
+  border: none;
+  background: rgb(86, 97, 109);
+  border-radius: 5px;
+  color: #fff;
+  font-size: 17px;
+  cursor: pointer;
+  width: 250px;
+  height: 40px;
+  padding: 10px;
+  transition: .3s ease-in-out;
+}
+
+.message_con {
+  color:rgb(255, 255, 255);
+  padding: 20px 0;
+  max-width: 300px;
+  text-align: center;
+}
+
+.theme_message {
+  outline: none;
+  padding: 5px;
+}
+
+.modal_content {
+  padding: 6px;
+  width:100%;
+  display: none;
+  justify-content: center;
+  align-self: center;
+  flex-direction: column;
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
+  animation-name: fadeIn;
+}
+.contents{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+}
+.label,
+.label-text{
+  color: white;
+}
+.label-text-block{
+  width: 100%;
+  display: flex;
+  justify-content: center
+}
+.label-text{
+  text-align: center;
+}
+.textarea {
+  display: flex;
+  justify-content: center;
+  max-width: 500px;
+  width: 500px;
+  min-width: 400px;
+  height: 150px;
+  font-size: 19px;
+  color: rgb(6, 7, 7);
+  outline: none;
+  margin: 30px 0;
+  padding: 5px;
+}
+.btn-cont{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin: auto auto;
+}
+.modal_content.open {
+  display: flex;
+}
+
+.window {
+  padding: 30px 30px;
+  background: rgba(17, 17, 17, 0.8);
+  transition: all 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
