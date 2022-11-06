@@ -1,0 +1,10 @@
+{
+    "name": "baza-znaniy/baza-znaniy",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "core\\": "core",
+            "app\\": "app"
+        }
+    }
+}

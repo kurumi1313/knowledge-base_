@@ -1,0 +1,183 @@
+{
+    "database": {
+        "name": "baza-znaniy",
+        "host": "localhost",
+        "password": "",
+        "user": "root",
+        "charset": "utf8"
+    },
+    "router": {
+        "methods": [
+            "GET",
+            "POST",
+            "DELETE",
+            "PUT"
+        ],
+        "params": {
+            "int": "[0-9]+",
+            "string": "[A-Za-z\\.\\-_%]+",
+            "any": "[A-Za-z0-9\\.\\-_%]+"
+        },
+        "role": [
+            "all",
+            "admin",
+            "cheefofmeat",
+            "confectioner"
+        ],
+        "routes": {
+            "GET": {
+                "/": {
+                    "controller": "MainController:main",
+                    "role": "all",
+                    "title": "Главная страница | Великий Кулинар"
+                },
+                "/standarts": {
+                    "controller": "MainController:standarts",
+                    "role": "all",
+                    "title": "Документы | Великий Кулинар"
+                },
+                "/licenses": {
+                    "controller": "MainController:licenses",
+                    "role": "all",
+                    "title": "Документы | Великий Кулинар"
+                },
+                "/laws": {
+                    "controller": "MainController:laws",
+                    "role": "all",
+                    "title": "Документы | Великий Кулинар"
+                },
+                "/FAQ": {
+                    "controller": "MainController:faq",
+                    "role": "all",
+                    "title": "FAQ | Великий Кулинар"
+                },
+                "/login": {
+                    "controller": "AuthController:login",
+                    "role": "noauth",
+                    "title": "Вход для персонала | Великий Кулинар",
+                    "layout": "additional"
+                },
+                "/instructions" : {
+                    "controller": "InstructionsController:show_instructions",
+                    "role": "all",
+                    "title": ""
+                },
+                "/instruction/create" : {
+                    "controller": "InstructionsController:create_page",
+                    "role": "all",
+                    "title": "Создать инструкцию | Великий Кулинар"
+                },
+                "/instruction/{id:int}" : {
+                    "controller": "InstructionsController:show",
+                    "role": "all",
+                    "title": "Инструкция | Великий Кулинар"
+                },
+                "/admin/login": {
+                    "controller": "AdminController:login",
+                    "role": "noauth",
+                    "title": "Вход для админа | Великий Кулинар",
+                    "layout": "additional"
+                },
+                "/admin/panel": {
+                    "controller": "AdminController:panel",
+                    "role": "admin",
+                    "title": "Админская панель | Великий Кулинар",
+                    "layout": "admin"
+                },
+                "/admin/panel/add/instruction": {
+                    "controller": "AdminController:instruction_add_page",
+                    "role": "admin",
+                    "title": "Добавить инструкцию | Великий Кулинар",
+                    "layout": "admin"
+                },
+                "/admin/panel/delete/instruction" : {
+                    "controller": "AdminController:instruction_delete_page",
+                    "role": "admin",
+                    "title": "Удалить инструкцию | Великий Кулинар",
+                    "layout": "admin"
+                },
+                "/admin/panel/add/user": {
+                    "controller": "AdminController:user_add_page",
+                    "role": "admin",
+                    "title": "Добавить пользователя | Великий Кулинар",
+                    "layout": "admin"
+                },
+                "/admin/panel/delete/user": {
+                    "controller": "AdminController:user_delete_page",
+                    "role": "admin",
+                    "title": "Удалить пользователя | Великий Кулинар",
+                    "layout": "admin"
+                },
+                "/admin/panel/add/admin": {
+                    "controller": "AdminController:admin_add_page",
+                    "role": "admin",
+                    "title": "Добавить админа | Великий Кулинар",
+                    "layout": "admin"
+                },
+                "/logout": {
+                    "controller": "AuthController:logout",
+                    "role": "all"
+                },
+                "/admin/panel/users": {
+                    "controller": "AdminController:admin_users_list",
+                    "role": "admin",
+                    "title": "Список пользователей | Великий Кулинар",
+                    "layout": "admin"
+                },
+                "/admin/panel/instructions": {
+                    "controller": "InstructionsController:admin_instructions_list",
+                    "role": "admin",
+                    "title": "Список инструкций | Великий Кулинар",
+                    "layout": "admin"
+                },
+                "/admin/panel/reports": {
+                    "controller": "AdminController:admin_reports_list",
+                    "role": "admin",
+                    "title": "Отчеты | Великий Кулинар",
+                    "layout": "admin"
+                }
+            },
+            "POST": {
+                "/login/auth": {
+                    "controller": "AuthController:auth",
+                    "role": "noauth"
+                },
+                "/admin/auth": {
+                    "controller": "AdminController:auth",
+                    "role": "noauth"
+                },
+                "/admin/add/user": {
+                    "controller": "AdminController:user_add",
+                    "role": "admin"
+                },
+                "/admin/feedback": {
+                    "controller": "AdminController:admin_feedback",
+                    "role": "all"
+                },
+                "/instruction/add": {
+                    "controller": "InstructionsController:instruction_add",
+                    "role": "all"
+                },
+                "/instruction/delete": {
+                    "controller": "InstructionsController:instruction_delete",
+                    "role": "admin"
+                },
+                "/user/delete": {
+                    "controller": "InstructionsController:user_delete",
+                    "role": "admin"
+                },
+                "/admin/add/admin": {
+                    "controller": "AdminController:admin_add",
+                    "role": "admin"
+                },
+                "/search": {
+                    "controller": "MainController:search",
+                    "role": "all"
+                }
+            }
+        }
+    },
+    "view": {
+        "layout": "default"
+    }
+}
